@@ -1,0 +1,223 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+/* Root Variables */
+:root {
+    --primary-darktan: #918151;
+    --secondary-tan: #d2b48c;
+    --primary-black: #000000;
+    --secondary-black: #101010;
+    --primary-pastelbrown: #836953;
+    --secondary-shadow: #8a795d;
+    --primary-silver: #c0c0c0;
+    --primary-silverchalice: #acacac;
+    --highlight: #ff5722; /* For call-to-action elements */
+}
+
+/* Background Colors */
+.bg-darktan {
+    background: var(--primary-darktan);
+}
+.bg-tan {
+    background: var(--secondary-tan);
+}
+
+/* Main Background Color */
+body {
+    background-color: var(--primary-silverchalice); /* Set background color to #f9f5f2 */
+}
+
+/* Main Container */
+.main-container {
+    min-height: 70vh;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling issues */
+    position: relative;
+}
+
+/* Circle Effect */
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-silver);
+    width: 20rem;
+    height: 25rem;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--primary-pastelbrown);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--primary-silverchalice);
+    transition: color 0.3s ease;
+}
+.navlinks:hover,
+.active {
+    color: var(--primary-darktan);
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.line {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.3rem 0;
+    background: var(--primary-black);
+}
+
+
+/* Search Bar Container */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--primary-silver);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1.5rem;
+}
+
+/* Search Input Field */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-black);
+    background: transparent;
+}
+
+/* Search Button */
+.search-button {
+    border: none;
+    background: var(--secondary-shadow);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.search-button:hover {
+    background: var(--secondary-shadow); /* Slightly darker color for hover effect */
+}
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Flexbox for Image Row */
+.image-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next row */
+    justify-content: space-around; /* Evenly space cards within the row */
+    gap: 20px; 
+  }
+  
+  .image-card {
+    flex-basis: calc(50% - 10px); /* Calculate card width for two columns */
+    max-width: 300px; 
+    margin: 10px; /* Add margin for better spacing */
+    padding: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.2s ease-in-out; 
+  }
+  
+  .image-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 8px;
+  }
+  
+  .image-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+/* Footer */
+footer {
+    width: 100%;
+    padding: 2rem 1rem;
+    background: var(--secondary-black);
+    color: var(--primary-silver);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Border styling for the paragraph with data-type="border" */
+[data-type="border"] {
+    display: block; /* Block-level element for proper layout */
+    border-right: 0.6rem solid var(--primary-pastelbrown); /* Apply the right border */
+    padding-right: 2rem; /* Space between text and border */
+    margin-bottom: 1rem; /* Add spacing for multiple elements */
+    text-align: right; /* Right-align text */
+    
+    min-height: 1.5rem; /* Ensure element has visible height */
+}

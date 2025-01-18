@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EternaTimes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.html">
+</head>
+<body>
+    <div class="main-container bg-silver">
+        <div class="circle"></div>
+
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <ul class="navlist">
+                        <li><a href="#" class="navlinks active">Home</a></li>
+                        <li><a href="products.html" class="navlinks">Products</a></li>
+                        <li><a href="#" class="navlinks">Research</a></li>
+                        <li><a href="#" class="navlinks">Blog</a></li>
+                        <li><a href="#" class="navlinks">About Us</a></li>
+                    </ul>
+
+                    <!-- Hamburger Menu for Mobile Devices -->
+                    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+
+                    <!-- Search Bar Form -->
+                    <form class="search-bar" action="#" method="GET">
+                        <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
+                        <button class="search-button" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <div class="hero-section">
+            <div class="left-container">
+                <h1>YOUR VERY OWN HOME FOR WATCHES</h1>
+            </div>
+            <div class="middle-container">
+                <img src="image/eternatimes12.png" alt="Eterna Times Watch Collection" />
+            </div>
+            <div class="right-container">
+                <p class="para" data-type="border">
+                    Welcome to Eterna-Times, where every second matters,  we have best watch collection at best ptice
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-container bg-silver">
+        <div class="scroll">
+            <span class="watch-emoji">⌚</span> <!-- Watch Emoji -->
+            <h2>50% OFF</h2>
+            <h2>Order Now</h2>
+            <div class="break"></div>
+        </div>
+        <div class="scroll">
+            <span class="watch-emoji">⌚</span> <!-- Watch Emoji -->
+            <h2>50% OFF</h2>
+            <h2>Order Now</h2>
+            <div class="break"></div>
+        </div>
+        <div class="scroll">
+            <span class="watch-emoji">⌚</span> <!-- Watch Emoji -->
+            <h2>50% OFF</h2>
+            <h2>Order Now</h2>
+            <div class="break"></div>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navlist = document.querySelector('.navlist');
+
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+            navlist.classList.toggle('active');
+        });
+    </script>
+    <section class="section bg-silver">
+        <section class="image-row-section">
+            <div class="container">
+                <h2 class="section-title">Our Watch Collection</h2>
+                <div class="image-row">
+                    <!-- Image 1 -->
+                    <div class="image-card">
+                        <img src="image/a09c613f-def2-4833-9a02-42b38b31d829.jpg" alt="Watch 1">
+                        <h4>Casio Classic</h4>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="image-card">
+                        <img src="image/Rado DiaStar Original Skeleton Review_ Is It the Best Skeleton Watch for Under $3,000_ — MTR Watches.jpg" alt="Watch 2">
+                        <h4>Rado Elegance</h4>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="image-card">
+                        <img src="image/1823SM05_1_75c7fa08-391a-46ed-b109-038fe211681b.webp" alt="Watch 3">
+                        <h4>Titan Modern</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       
+    </div>
+</div>
+     
+        </div>
+    </section> 
+    
+    <footer class="footer bg-darktan">
+        <div class="container">
+            <p>&copy; 2025 EternaTimes. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <p>Follow us on:
+                <a href="#" aria-label="Facebook">Facebook</a> |
+                <a href="#" aria-label="Twitter">Twitter</a> |
+                <a href="#" aria-label="Instagram">Instagram</a>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
+
+
+
+
