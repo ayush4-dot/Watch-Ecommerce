@@ -54,9 +54,9 @@ body {
     z-index: -1;
 }
 
-/* Container */
+* Container */
 .container {
-    width: 100%;
+    width: 1/00%;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;

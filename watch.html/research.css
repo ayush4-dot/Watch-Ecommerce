@@ -1,0 +1,180 @@
+.btcontainer {
+    width: 100%;
+    min-height: 350px;
+    padding:10px;
+    background-image:url(image/Research\ background.webp);
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    }
+    /* Search Bar Container */
+    .search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background: silver;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1.5rem;
+    }
+    
+    
+    /* Search Input Field */
+    .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: black;
+    background: transparent;
+    }
+    
+    
+    /* Search Button */
+    .search-button {
+    border: none;
+    background:#8A795D;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+    
+    
+    /* Hover Effect */
+    .search-button:hover {
+    background: #8A795D; /* Slightly darker color for hover effect */
+    }
+    
+    
+    .home-text {
+    color:darkred;
+    text-align: center;
+    font-size: 70px;
+    }
+    
+    
+    .home-title {
+    font-size: 40px;
+    text-align: center;
+    }
+    
+    
+    h4 {
+    font-size: 35px;
+    text-align: center;
+    color: darkred;
+    }
+    
+    
+    h2 {
+    font-size: 30px;
+    text-align: left;
+    color:tan;
+    }
+    .title-text {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color:darkblue;
+    }
+    .bxcontainer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    }
+    
+    
+    /* Footer */
+    footer {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color:#988558;
+    color:silver;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    }
+    
+    
+    /* Border styling for the paragraph with data-type="border" */
+    [data-type="border"] {
+    display: block; /* Block-level element for proper layout */
+    border-right: 0.6rem solid #836953 ; /* Apply the right border */
+    padding-right: 2rem; /* Space between text and border */
+    margin-bottom: 1rem; /* Add spacing for multiple elements */
+    text-align: right; /* Right-align text */
+    
+    
+    min-height: 1.5rem; /* Ensure element has visible height */
+    }
+    .container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    
+    /* Header */
+    header {
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background:#836953;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+    
+    
+    /* Navbar */
+    .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .navlist {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    }
+    li {
+    list-style: none;
+    }
+    a {
+    text-decoration: none;
+    font-size: 1rem;
+    color:#B9BAB8;
+    transition: color 0.3s ease;
+    }
+    .navlinks:hover,
+    .active {
+    color:#988558;
+    font-weight: bold;
+    }
+    
+    
+    /* Hamburger Menu */
+    .hamburger {
+    display: none;
+    cursor: pointer;
+    }
+    .line {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.3rem 0;
+    background:black;
+    }
