@@ -1,82 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us & Contact - EternaTimes</title>
-  <link rel="stylesheet" href="aboutus.css">
-  <link rel="stylesheet" href="blog.js/blog.js">
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website about watches">
+    <meta name="keywords" content="Watches, Timepieces, Research">
+    <meta http-equiv="refresh" content="30">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="aboutus.css">
+
+    <title>About Us</title>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul class="navlist">
-        <li><a href="index.html" class="navlinks">Home</a></li>
-        <li><a href="products.html" class="navlinks">Products</a></li>
-        <li><a href="research.html" class="navlinks">Research</a></li>
-        <li><a href="blog.html" class="navlinks">Blog</a></li>
-        <li><a href="aboutus.html" class="navlinks active">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul class="navlist">
+                    <li><a href="watch.html" class="navlinks">Home</a></li>
+                    <li><a href="products.html" class="navlinks">Products</a></li>
+                    <li><a href="research.html" class="navlinks">Research</a></li>
+                    <li><a href="blog.html" class="navlinks">Blog</a></li>
+                    <li><a href="aboutus.html" class="navlinks active">About Us</a></li>
+                </ul>
 
-  <main>
-    <!-- About Us Section -->
-    <section id="about-us">
-      <h1>About Us</h1>
-      <p>
-        At <strong>EternaTimes</strong>, we take pride in offering a diverse collection of premium watches from world-renowned brands like Rado, Casio, and Titan.
-        Explore our range and experience the artistry and precision of these exceptional brands.
-      </p>
-      <p><strong>Join us on this remarkable journey where every watch tells a story of timeless elegance, precision, and style.</strong></p>
+                <!-- Hamburger Menu for Mobile Devices -->
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
 
-      <!-- Team Section -->
-      <section class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-member">
-          <h3>Leader: Dilisha Gurung</h3>
-          <img src="dilisha.jpg" alt="Dilisha Gurung">
-          <p><strong>Skills:</strong> Communication, Public Speaking, Event Management</p>
+                <!-- Search Bar Form -->
+                <form class="search-bar" action="#" method="GET">
+                    <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
+                    <button class="search-button" type="submit">Search</button>
+                </form>
+            </nav>
         </div>
-        <div class="team-member">
-          <h3>Marketing Head: Ayush Poddar</h3>
-          <img src="ayush.jpg" alt="Ayush Poddar">
-          <p><strong>Skills:</strong> Event Management, Graphic Designing, Video Editing</p>
-        </div>
-        <div class="team-member">
-          <h3>Manager: Aashika Shrestha</h3>
-          <img src="aashika.jpg" alt="Aashika Shrestha">
-          <p><strong>Skills:</strong> Organization, Leadership, Event Management, Interpersonal</p>
-        </div>
-      </section>
+    </header>
+
+    <!-- Research Section -->
+    <section class="btcontainer">
+        <h1 class="home-text">About Us</h1>
+        <h4>Everything About Us</h4>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact-us">
-      <h1>Contact Us</h1>
-      <p>Fill out the form below to get in touch with us!</p>
-      <form id="contactForm" class="form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
+    <section class="contentBx">
+        <h2 class="title text">Here! Is the About Us Page</h2>
+        <p class="title-text">
+            We present everything about us.
+        </p>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 EternaTimes. All rights reserved.</p>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </footer>
+    <main class="main-content">
+        <section class="section" id="team">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member" onclick="openCV('john-cv')">
+                    <img src="image/ayush.jpg" alt="Ayush Kumar Poddar">
+                    <h3>Ayush Kumar Poddar</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                
+                <div class="team-member" onclick="openCV('dilisha-cv')">
+                    <img src="image/dilisha.jpg" alt="Dilisha Gurung">
+                    <h3>Dilisha Gurung</h3>
+                    <p>CTO</p>
+                </div>
+                
+                <div class="team-member" onclick="openCV('aashika-cv')">
+                    <img src="image/aashika.jpg" alt="Aashika Shrestha">
+                    <h3>Aashika Shrestha</h3>
+                    <p>Head of Design</p>
+                </div>
+                   
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for CVs -->
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeCV()">&times;</button>
+            <div id="cvContent" class="cv-content"></div>
+        </div>
+    </div>
+
+    <script>
+        function openCV(cvFile) {
+            const cvModal = document.getElementById("cvModal");
+            const cvContent = document.getElementById("cvContent");
+
+            // Define CV content for each person
+            const cvData = {
+                'john-cv': `
+                    <header class="cv-header">
+                        <h1>Ayush Kumar Poddar</h1>
+                        <p class="title">CEO & Founder</p>
+                    </header>
+
+                    <section class="cv-section">
+                        <h2>Professional Summary</h2>
+                        <p>Experienced business leader with over 15 years in technology and innovation.</p>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Experience</h2>
+                        <div class="experience-item">
+                            <h3>CEO & Founder</h3>
+                            <div class="company">ETERNA-TIMES⌚</div>
+                            <div class="date">2025 - Present</div>
+                            <p>Founded and led the company through rapid growth and expansion. Developed strategic partnerships and secured Series A funding.</p>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3>Director of Operations</h3>
+                            <div class="company">ETERNA-TIMES⌚</div>
+                            <div class="date">2025</div>
+                            <p>Led operational strategy.</p>
+                        </div>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Education</h2>
+                        <div class="education-item">
+                            <h3>Bachelor's in Computer Science</h3>
+                            <div class="school">Islington College</div>
+                            <div class="date">2024</div>
+                        </div>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">Leadership</div>
+                            <div class="skill-item">Strategy</div>
+                            <div class="skill-item">Innovation</div>
+                            <div class="skill-item">Team Building</div>
+                            <div class="skill-item">Product Development</div>
+                            <div class="skill-item">Business Strategy</div>
+                        </div>
+                    </section>
+                `,
+                'dilisha-cv': `
+                    <header class="cv-header">
+                        <h1>Dilisha Gurung</h1>
+                        <p class="title">CTO</p>
+                    </header>
+
+                    <section class="cv-section">
+                        <h2>Professional Summary</h2>
+                        <p>Experienced technology leader specializing in event management.</p>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Experience</h2>
+                        <div class="experience-item">
+                            <h3>CTO</h3>
+                            <div class="company">ETERNA-TIMES⌚</div>
+                            <div class="date">2025 - Present</div>
+                            <p>Led the tech team to develop innovative software solutions.</p>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3>Developer</h3>
+                            <div class="company">Eterna-times</div>
+                            <div class="date">2022 - 2025</div>
+                            <p>Developed and maintained scalable applications.</p>
+                        </div>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Education</h2>
+                        <div class="education-item">
+                            <h3>Bachelor's in Computer Science</h3>
+                            <div class="school">Islington colllege</div>
+                            <div class="date">2024</div>
+                        </div>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">Software Development</div>
+                            <div class="skill-item">Team Leadership</div>
+                            <div class="skill-item">Problem Solving</div>
+                            <div class="skill-item">Cloud Computing</div>
+                            <div class="skill-item">Agile Methodologies</div>
+                        </div>
+                    </section>
+                `,
+                'aashika-cv': `
+                    <header class="cv-header">
+                        <h1>Aashika Shrestha</h1>
+                        <p class="title">Head of Design</p>
+                    </header>
+
+                    <section class="cv-section">
+                        <h2>Professional Summary</h2>
+                        <p>Creative design leader with 8+ years of experience in user interface and experience design.</p>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2>Experience</h2>
+                        <div class="experience-item">
+                            <h3>Head of Design</h3>
+                            <div class="company">ETERNA-TIMES⌚</div>
+                            <div class="date">2025 - Present</div>
+                            <p>Lead design team in developing innovative products.</p>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3>Graphics Designer</h3>
+                            
+                            <p>Created exceptional designs for multiple clients in the tech industry.</p>
+                        </div>
+                    </section>
+
+                    
+
+                    <section class="cv-section">
+                        <h2>Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">User Interface Design</div>
+                            <div class="skill-item">Creative Direction</div>
+                            <div class="skill-item">Brand Strategy</div>
+                            <div class="skill-item">Adobe Suite</div>
+                        </div>
+                    </section>
+                `
+            };
+
+            // Insert the CV data into the modal
+            cvContent.innerHTML = cvData[cvFile];
+
+            cvModal.style.display = "block"; // Show modal
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Close the CV modal
+        function closeCV() {
+            const cvModal = document.getElementById("cvModal");
+            const cvContent = document.getElementById("cvContent");
+
+            cvModal.style.display = "none"; // Hide modal
+            cvContent.innerHTML = ''; // Clear the content
+            document.body.style.overflow = "auto"; // Enable scrolling
+        }
+    </script>
+
+
+<footer class="footer bg-darktan">
+    <div class="container">
+        <p>&copy; 2025 EternaTimes. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>Follow us on:
+            <a href="#" aria-label="Facebook">Facebook</a> |
+            <a href="#" aria-label="Twitter">Twitter</a> |
+            <a href="#" aria-label="Instagram">Instagram</a>
+        </p>
+    </div>
+</footer>
+
+
 </body>
 </html>

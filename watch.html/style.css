@@ -29,7 +29,7 @@
 
 /* Main Background Color */
 body {
-    background-color: var(--primary-silverchalice); /* Set background color to #f9f5f2 */
+    background-image: url(image/Research\ background.webp);
 }
 
 /* Main Container */
@@ -40,19 +40,6 @@ body {
     position: relative;
 }
 
-/* Circle Effect */
-.circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--primary-silver);
-    width: 20rem;
-    height: 25rem;
-    border-radius: 50%;
-    filter: blur(50px);
-    z-index: -1;
-}
 
 /* Container */
 .container {
@@ -107,7 +94,7 @@ a {
     font-weight: bold;
 }
 
-/* Hamburger Menu */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -118,7 +105,9 @@ a {
     margin: 0.3rem 0;
     background: var(--primary-black);
 }
-
+h4{
+    color:#acacac;
+}
 
 /* Search Bar Container */
 .search-bar {
@@ -303,6 +292,7 @@ h2 {
     white-space: nowrap;
 }
 
+
 /* Add Watch Emoji Styling */
 .watch-emoji {
     font-size: 3rem; /* Adjust size of emoji */
@@ -318,30 +308,27 @@ h2 {
     display: inline-block;
     vertical-align: middle;
 }
-
+/* Flexbox for Image Row */
 .image-row {
     display: flex;
     flex-wrap: wrap; /* Allow images to wrap to the next row */
     justify-content: space-around; /* Evenly space cards within the row */
-    align-items: center; /* Center items vertically */
-    gap: 2rem; /* Adjust gap as needed */
+    gap: 20px; 
   }
   
   .image-card {
-    flex-basis: calc(50% - 1rem); /* Calculate card width for two columns */
+    flex-basis: calc(50% - 10px); /* Calculate card width for two columns */
     max-width: 300px; 
-    margin: 1rem; /* Add margin for better spacing */
-    padding: 1.5rem; 
+    margin: 10px; /* Add margin for better spacing */
+    padding: 15px; 
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease; 
-    background: var(--primary-silver); /* Use CSS variables for better maintainability */
-    text-align: center; 
+    transition: transform 0.2s ease-in-out; 
+    background-color:#d2b48c;
   }
   
   .image-card:hover {
     transform: translateY(-5px); /* Slight hover effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
   
   .image-card img {
@@ -349,69 +336,14 @@ h2 {
     height: auto;
     object-fit: cover; 
     border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-card:hover img {
-    transform: scale(1.1);
   }
   
   .image-card h4 {
-    font-size: 18px; 
-    margin: 1rem 0; /* Adjust margin as needed */
-    color: #333; 
-    transition: color 0.3s ease;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
   }
-  
-  .image-card:hover h4 {
-    color: var(--secondary-tan);
-  }.image-row {
-    display: flex;
-    flex-wrap: wrap; /* Allow images to wrap to the next row */
-    justify-content: space-around; /* Evenly space cards within the row */
-    align-items: center; /* Center items vertically */
-    gap: 2rem; /* Adjust gap as needed */
-  }
-  
-  .image-card {
-    flex-basis: calc(50% - 1rem); /* Calculate card width for two columns */
-    max-width: 300px; 
-    margin: 1rem; /* Add margin for better spacing */
-    padding: 1.5rem; 
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease; 
-    background: var(--primary-silver); /* Use CSS variables for better maintainability */
-    text-align: center; 
-  }
-  
-  .image-card:hover {
-    transform: translateY(-5px); /* Slight hover effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .image-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-card:hover img {
-    transform: scale(1.1);
-  }
-  
-  .image-card h4 {
-    font-size: 18px; 
-    margin: 1rem 0; /* Adjust margin as needed */
-    color: #333; 
-    transition: color 0.3s ease;
-  }
-  
-  .image-card:hover h4 {
-    color: var(--secondary-tan);
-  }
+
 /* Fade-in Animation */
 .image-card {
     opacity: 0;
@@ -436,7 +368,91 @@ h2 {
     }
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: #333; /* Using your existing color variable */
+}
+ /* Create a container for the title */
+.title-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
 
+.section-title {
+    font-size: 2rem;
+    color: #333;
+}
+/* Table Styles */
+.comparison-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+/* Header Styles */
+.comparison-table th {
+    background-color: #836953;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Cell Styles */
+.comparison-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Row Hover Effect */
+.comparison-table tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternating Row Colors */
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* First Column Emphasis */
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+.btcontainer {
+    width: 100%;
+    min-height: 350px;
+    padding:10px;
+    background-image:url(image/Research\ background.webp);
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    }
 
 
 

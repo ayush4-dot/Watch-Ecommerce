@@ -29,9 +29,8 @@
 
 /* Main Background Color */
 body {
-    background-color: var(--primary-silverchalice); /* Set background color to #f9f5f2 */
+    background-image: url(image/Research\ background.webp);
 }
-
 /* Main Container */
 .main-container {
     min-height: 70vh;
@@ -40,23 +39,11 @@ body {
     position: relative;
 }
 
-/* Circle Effect */
-.circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--primary-silver);
-    width: 20rem;
-    height: 25rem;
-    border-radius: 50%;
-    filter: blur(50px);
-    z-index: -1;
-}
 
-* Container */
+
+/* Container */
 .container {
-    width: 1/00%;
+    width: 100%;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -76,6 +63,9 @@ header {
     top: 0;
     z-index: 1000;
 }
+
+
+
 
 /* Navbar */
 .navbar {
@@ -104,7 +94,7 @@ a {
     font-weight: bold;
 }
 
-/* Hamburger Menu */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -166,6 +156,91 @@ a {
     color: #333;
 }
 
+/* Hero Section with Search Bar */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    height: calc(100vh - 14vh); /* Ensures the hero section takes the remaining height after header */
+    text-align: center; /* Center align text inside hero section */
+}
+
+.hero-section .left-container,
+.hero-section .middle-container,
+.hero-section .right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+h1 {
+    font-size: 4.1rem;
+    text-transform: uppercase;
+    color: var(--primary-black);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Hero Section Image */
+.hero-section img {
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Ensure the image doesn't stretch too wide */
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the available space without distortion */
+}
+
+/* Search Bar Container */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--primary-silver);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1.5rem;
+}
+
+/* Search Input Field */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-black);
+    background: transparent;
+}
+
+/* Search Button */
+.search-button {
+    border: none;
+    background: var(--secondary-shadow);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.search-button:hover {
+    background: var(--secondary-shadow); /* Slightly darker color for hover effect */
+}
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 /* Flexbox for Image Row */
 .image-row {
     display: flex;
@@ -182,6 +257,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: transform 0.2s ease-in-out; 
+    background-color:#d2b48c;
   }
   
   .image-card:hover {
@@ -221,3 +297,16 @@ footer {
     
     min-height: 1.5rem; /* Ensure element has visible height */
 }
+
+/* Create a container for the title */
+.title-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+}
+
