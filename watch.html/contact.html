@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Websiteaboutwatches">
+    <meta name="keywords" content="HTML,CSS,Javascript">
+    <meta name="refresh"  content="30">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="watch.html">
+    <title>Contact Form</title>
+    <!--CSS-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .btcontainer {
+            width: 100%;
+            min-height: 150px;
+            padding: 10px;
+            background-image:url(image/Research\ background.webp);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin-top: 5px;
+            margin-left: 400px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .contact-form button:hover {
+            background: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container bg-silver">
+        <div class="circle"></div>
+    
+        <header>
+        <!--Navigaton Bar-->
+        <div class="container">
+        <nav class="navbar">
+            <ul class="navlist">
+                <h4>ETERNA-TIMES⌚</h4>
+                <!--homepage-->
+                <li><a href="#" class="navlinks active">Home</a></li>
+                <!--productpage-->
+                <li><a href="products.html" class="navlinks">Products</a></li>
+                <!--researchpage-->
+                <li><a href="research.html" class="navlinks">Research</a></li>
+                <!--blogpage-->
+                <li><a href="blog.html" class="navlinks">Blog</a></li>
+                <!--aboutuspage-->
+                <li><a href="aboutus.html" class="navlinks">About Us</a></li>
+                <!--contactpagw-->
+                <li><a href="contact.html" class="navlinks active">Contact Us</a></li>
+            </ul>
+    
+
+                <!-- Hamburger Menu for Mobile Devices -->
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+                <!-- Search Bar Form -->
+                <form class="search-bar" action="#" method="GET">
+                    <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
+                    <button class="search-button" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <div class="btcontainer">
+        <h2>Give Your Feedback Here!</h2>
+    </div>
+    <form class="contact-form" id="contactForm">
+        <h2>Contact Us</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <span class="error" id="nameError"></span>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <span class="error" id="emailError"></span>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <span class="error" id="subjectError"></span>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <span class="error" id="messageError"></span>
+        <button type="submit">Send</button>
+    </form>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("subjectError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+            if (email === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").textContent = "Valid email is required.";
+                isValid = false;
+            }
+            if (subject === "") {
+                document.getElementById("subjectError").textContent = "Subject is required.";
+                isValid = false;
+            }
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Message is required.";
+                isValid = false;
+            }
+            
+            if (isValid) {
+                alert("Thank you for contacting us!");
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+    <!--Footer starts-->
+   <footer class="footer bg-darktan">
+    <div class="container">
+        <p>&copy; 2025 EternaTimes. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>Follow us on:
+            <a href="#" aria-label="Facebook">Facebook</a> |
+            <a href="#" aria-label="Twitter">Twitter</a> |
+            <a href="#" aria-label="Instagram">Instagram</a>
+        </p>
+    </div>
+</footer>
+<!--Footer ends-->
+</body>
+</html>

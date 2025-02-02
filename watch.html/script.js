@@ -36,14 +36,48 @@ function updateCartDisplay() {
 function openCV(cvFile) {
     const cvModal = document.getElement
 }
+// Open popup and display content
+function openPopup(title, price, description, image) {
+    // Get the popup image element
+    let popupImageElement = document.getElementById('popup-image');
 
-// Open the popup
-function openPopup() {
+    // Set the content for the popup dynamically
+    document.getElementById('popup-title').innerText = title;
+    document.getElementById('popup-price').innerText = price;
+    document.getElementById('popup-description').innerText = description;
+
+    // Set the image source
+    popupImageElement.src = image;
+
+    // Display the popup with flex
     document.getElementById('popup').style.display = 'flex';
-  }
-  
-  // Close the popup
-  function closePopup() {
+}
+
+// Close popup
+function closePopup() {
+    // Hide the popup
     document.getElementById('popup').style.display = 'none';
-  }
-  
+}
+ 
+function submitReview() {
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const reviewMessage = document.getElementById("review-message").value.trim();
+
+    if (!rating) {
+        alert("Please select a rating!");
+        return;
+    }
+
+    if (!reviewMessage) {
+        alert("Please write your review message!");
+        return;
+    }
+
+    // Display a message indicating the review has been submitted
+    alert("Your review is submitted!");
+
+    // Clear the review form after submission
+    rating.checked = false;
+    document.getElementById("review-message").value = '';
+}
+ 

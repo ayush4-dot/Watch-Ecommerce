@@ -5,173 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Watch Collection</title>
     <link rel="stylesheet" href="stylem.css">
-    <link rel="stylesheet" href="watch.html">
-    <link rel="stylesheet" href="script.js">
-    <link rel="stylesheet" href="research.html">
-    <script src="script.js"></script></head>
-<header>
-    <div class="container">
-        <nav class="navbar">
-            <ul class="navlist">
-                <li><a href="watch.html" class="navlinks">Home</a></li>
-                <li><a href="products.html" class="navlinks active">Products</a></li>
-                <li><a href="research.html" class="navlinks">Research</a></li>
-                <li><a href="blog.html" class="navlinks">Blog</a></li>
-                <li><a href="aboutus.html" class="navlinks">About Us</a></li>
-            </ul>
-
-            <button class="hamburger" aria-label="Menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-
-            <form class="search-bar" action="#" method="GET">
-                <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
-                <button class="search-button" type="submit">Search</button>
-            </form>
-        </nav>
-    </div>
-</header>
+    <script src="script.js" defer></script>
+</head>
 <body>
-    <section class="image-row-section">
+    <header>
         <div class="container">
-            <div class="title-container">
-                <h2 class="section-title"> Our Brands</h2>
-            </div>
-            <div class="image-row">
-                <div class="image-card">
-                    <img src="image/1A.jpeg" alt="Watch 1">
-                    <h4>Casio Classic</h4>
+            <nav class="navbar">
+                <!-- Added hamburger menu for mobile -->
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
-                <div class="image-card">
-                    <img src="image/Open heart.avif" alt="Watch 2">
-                    <h4>Rado Elegance</h4>
+                
+                <ul class="navlist">
+                    <li><a href="watch.html" class="navlinks">Home</a></li>
+                    <li><a href="products.html" class="navlinks active">Products</a></li>
+                    <li><a href="research.html" class="navlinks">Research</a></li>
+                    <li><a href="blog.html" class="navlinks">Blog</a></li>
+                    <li><a href="aboutus.html" class="navlinks">About Us</a></li>
+                    <li><a href="contact.html" class="navlinks">Contact Us</a></li>
+                </ul>
+
+                <!-- Added search bar in header -->
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search watches...">
+                    <button class="search-button">Search</button>
                 </div>
-                <div class="image-card">
-                    <img src="i" alt="Watch 3">
-                    <h4>Titan Modern</h4>
-                </div>
-            </div>
+            </nav>
         </div>
-    </section>
-   
-    <section class="image-row-section">
-        <div class="container">
-            <div class="title-container">
-                <h2 class="section-title">RADO</h2>
+    </header>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Product Page</h1>
+                <p data-type="border">Discover our exclusive collection of premium watches</p>
             </div>
-            <div class="image-row">
-                <div class="image-card">
-                    <img src="image/captaincook_r32148162_sld_web.avif" alt="Watch 1">
-                    <h4>RADO CAPTAIN COOK HIGH-TECH CERAMIC SKELETON</h4>
-                    <h5>₹ 55500 <del> ₹ 50000 </del> </h5>
-                    <title>Shop Now</title>
-                    <button class="add-to-cart" onclick="addToCart('RADO CAPTAIN COOK HIGH-TECH CERAMIC SKELETON', 55500)">Add to Cart</button>
+        </section>
+
+        <!-- Our Brands Section -->
+        <section class="image-row-section">
+            <div class="container">
+                <div class="title-container">
+                    <h2 class="section-title">Our Brands</h2>
                 </div>
-                <div class="image-card">
-                    <img src="image/Open heart.avif" alt="Watch 2">
-                    <h4>RADO CENTRIX AUTOMATIC DIAMONDS OPEN HEART</h4>
-                    <h5>₹ 35500 <del> ₹ 50000 </del> </h5>
-                    <title>Shop Now</title>
-                    <button class="add-to-cart" onclick="addToCart('RADO CENTRIX AUTOMATIC DIAMONDS OPEN HEART', 35500)">Add to Cart</button>
-                    <div id="popup" class="popup">
-                        <div class="popup-content">
-                          <span class="close-btn" onclick="closePopup()">×</span>
-                          <h2>Product 1 Description</h2>
-                          <p>This is the description of product 1. It's amazing!</p>
-                        </div>
-                      </div>
-                    
-                      <script src="script.js"></script>
-                </div>
-                <div class="image-card">
-                    <img src="image/Automatic.avif" alt="Watch 3">
-                    <h4>RADO ANATOM AUTOMATIC</h4>
-                    <h5>₹ 45500 <del> ₹ 50000 </del> </h5>
-                    <button class="add-to-cart" onclick="addToCart('RADO ANATOM AUTOMATIC', 45500)">Add to Cart</button>
+                <div class="image-row">
+                    <div class="image-card">
+                        <img src="image/1A.jpeg" alt="Casio Classic" onclick="openPopup('Casio Classic', '₹ 25,000', 'A durable and stylish watch with a timeless design.','image/1A.jpeg');">
+                        <h4>Casio Classic</h4>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/Open heart.avif" alt="Rado Elegance" onclick="openPopup('Rado Elegance', '₹ 50,000', 'Luxury and elegance combined in a stunning timepiece.','image/Open heart.avif');">
+                        <h4>Rado Elegance</h4>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/black.webp" alt="Titan Modern" onclick="openPopup('Titan Modern', '₹ 30,000', 'A modern and sophisticated watch for professionals.','black.webp');">
+                        <h4>Titan Modern</h4>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="image-row-section">
-        <div class="container">
-            <div class="title-container">
-                <h2 class="section-title">TITAN</h2>
+        </section>
+
+        <!-- RADO Section -->
+        <section class="image-row-section">
+            <div class="container">
+                <div class="title-container">
+                    <h2 class="section-title">RADO</h2>
+                </div>
+                <div class="image-row">
+                    <div class="image-card">
+                        <img src="image/captaincook_r32148162_sld_web.avif" alt="RADO CAPTAIN COOK" 
+                        onclick="openPopup('RADO CAPTAIN COOK HIGH-TECH CERAMIC SKELETON', '₹ 55,500', 'A high-tech ceramic skeleton watch with innovative craftsmanship.',);">
+                        <h4>RADO CAPTAIN COOK HIGH-TECH CERAMIC SKELETON</h4>
+                        <h3>5500 <del>6000</del></h3>
+                        <h5>₹ 45500 <del> ₹ 50000 </del> </h5>
+                        <button class="add-to-cart" onclick="addToCart('RADO ANATOM AUTOMATIC', 45500)">Add to Cart</button>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/Open heart.avif" alt="Rado Elegance" onclick="openPopup('Rado Elegance', '₹ 50,000', 'Luxury and elegance combined in a stunning timepiece.',);">
+                        <h4>RADO CENTRIX AUTOMATIC DIAMONDS OPEN HEART</h4>
+                        <h5>₹ 25500 <del> ₹ 50000 </del> </h5>
+                         <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG WHITE DIAL METAL', 25500)">Add to Cart</button>
+                
+                    </div>
+                    <div class="image-card">
+                        <img src="image/Automatic.avif" alt="RADO ANATOM" onclick="openPopup('RADO ANATOM AUTOMATIC', '₹ 45,500', 'An elegant automatic watch with superior craftsmanship.',);">
+                        <h4>RADO ANATOM AUTOMATIC</h4>
+                        <h5>₹ 15500 <del> ₹ 50000 </del> </h5>
+                        <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG ANTHRACITE DIAL LEATHER', 15500)">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="image-row">
-                <div class="image-card">
-                    <img src="image/White .webp" alt="Watch 1">
-                    <h4>TITAN QUARTZ ANALOG WHITE DIAL METAL</h4>
-                    <h5>₹ 25500 <del> ₹ 50000 </del> </h5>
+        </section>
+
+        <!-- TITAN Section -->
+        <section class="image-row-section">
+            <div class="container">
+                <div class="title-container">
+                    <h2 class="section-title">TITAN</h2>
+                </div>
+                <div class="image-row">
+                    <div class="image-card">
+                        <img src="image/White .webp" alt="Titan White" onclick="openPopup('TITAN QUARTZ ANALOG WHITE DIAL METAL', '₹ 25,500', 'A sophisticated quartz analog watch with a white dial.', );">
+                        <h4>TITAN QUARTZ ANALOG WHITE DIAL METAL</h4>
+                        <h5>₹ 16500 <del> ₹ 50000 </del> </h5>
+                        <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG WITH BLACK DIAL METAL', 16500)">Add to Cart</button>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/square.webp" alt="Titan Square" onclick="openPopup('TITAN QUARTZ ANALOG ANTHRACITE DIAL LEATHER', '₹ 15,500', 'An elegant leather-strap watch with a stylish square dial.',);">
+                        <h4>TITAN QUARTZ ANALOG ANTHRACITE DIAL LEATHER</h4>
+                        <h3>8500 <del>6000</del></h3>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/black.webp" alt="Titan Black" onclick="openPopup('TITAN QUARTZ ANALOG BLACK DIAL METAL', '₹ 16,500', 'A sleek black-dial watch for all occasions.')">
+                        <h4>TITAN QUARTZ ANALOG BLACK DIAL METAL</h4>
+                        <h5>₹ 25500 <del> ₹ 50000 </del> </h5>
                     <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG WHITE DIAL METAL', 25500)">Add to Cart</button>
-                </div>
-                <div class="image-card">
-                    <img src="image/square.webp" alt="Watch 2">
-                    <h4>TITAN QUARTZ ANALOG ANTHRACITE DIAL LEATHER</h4>
-                    <h5>₹ 15500 <del> ₹ 50000 </del> </h5>
-                    <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG ANTHRACITE DIAL LEATHER', 15500)">Add to Cart</button>
-                </div>
-                <div class="image-card">
-                    <img src="image/black.webp" alt="Watch 3">
-                    <h4>TITAN QUARTZ ANALOG WITH BLACK DIAL METAL</h4>
-                    <h5>₹ 16500 <del> ₹ 50000 </del> </h5>
-                    <button class="add-to-cart" onclick="addToCart('TITAN QUARTZ ANALOG WITH BLACK DIAL METAL', 16500)">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="image-row-section">
-        <div class="container">
-            <h2 class="section-title">CASIO</h2>
-            <div class="image-row">
-                <div class="image-card">
-                    <img src="image/1A.jpeg" alt="Watch 1">
-                    <h4>CASIO GM-700-1A</h4>
-                    <h5>₹ 35500  <del> ₹ 50000 </del></h5>
-                    <button class="add-to-cart" onclick="addToCart('CASIO GM-700-1A', 35500)">Add to Cart</button>
+        </section>
+
+        <!-- CASIO Section -->
+        <section class="image-row-section">
+            <div class="container">
+                <div class="title-container">
+                    <h2 class="section-title">CASIO</h2>
                 </div>
-                <div class="image-card">
-                    <img src="image/1A4.webp" alt="Watch 2">
-                    <h4>CASIO GM-S2110PG-1A4</h4>
-                    <h5>₹ 45500 <del> ₹ 50000 </del></h5>
-                    <button class="add-to-cart" onclick="addToCart('CASIO GM-S2110PG-1A4', 45500)">Add to Cart</button>
-                </div>
-                <div class="image-card">
-                    <img src="image/B30000.jpg" alt="Watch 3">
-                    <h4>CASIO MTG-B3000DN-1A</h4>
-                    <h5>₹ 35500  <del> ₹ 50000 </del></h5>
-                    <button class="add-to-cart" onclick="addToCart('CASIO MTG-B3000DN-1A', 35500)">Add to Cart</button>
+                <div class="image-row">
+                    <div class="image-card">
+                        <img src="image/1A.jpeg" alt="CASIO GM-700-1A" onclick="openPopup('CASIO GM-700-1A', '₹ 35,500', 'A bold and stylish watch designed for durability and performance.', )">
+                        <h4>CASIO GM-700-1A</h4>
+                        <h5>₹ 35500  <del> ₹ 50000 </del></h5>
+                        <button class="add-to-cart" onclick="addToCart('CASIO GM-700-1A', 35500)">Add to Cart</button>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/1A4.webp" alt="CASIO GM-S2110PG-1A4" onclick="openPopup('CASIO GM-S2110PG-1A4', '₹ 45,500', 'A unique and durable watch with a modern aesthetic.')">
+                        <h4>CASIO GM-S2110PG-1A4</h4>
+                        <h5>₹ 45500 <del> ₹ 50000 </del></h5>
+                        <button class="add-to-cart" onclick="addToCart('CASIO GM-S2110PG-1A4', 45500)">Add to Cart</button>
+                    </div>
+                    <div class="image-card">
+                        <img src="image/B30000.jpg" alt="CASIO MTG-B3000DN-1A" onclick="openPopup('CASIO MTG-B3000DN-1A', '₹ 35,500', 'An advanced Casio watch with high-end materials and features.')">
+                        <h4>CASIO MTG-B3000DN-1A</h4>
+                        <h5>₹ 35500  <del> ₹ 50000 </del></h5>
+                        <button class="add-to-cart" onclick="addToCart('CASIO MTG-B3000DN-1A', 35500)">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    
-    <footer class="footer bg-darktan">
-        <div class="container">
-            <p>&copy; 2025 EternaTimes. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <p>Follow us on:
-                <a href="#" aria-label="Facebook">Facebook</a> |
-                <a href="#" aria-label="Twitter">Twitter</a> |
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <h5>ETERNA-TIMES⌚</h5>
-            </p>
-        </div>
-    </footer>
+    <!-- Popup -->
+ <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img src="" id="popup-image">
+        <h2 id="popup-title"></h2>
+        <h5 id="popup-price"></h5>
+        <p id="popup-description"></p>
 
-    <div id="cart-icon">
-        <span id="cart-count">0</span>
+        <!-- Review Section -->
+        <div class="review-section">
+            <h3>Leave a Review</h3>
+            <div class="star-rating">
+                <input type="radio" name="rating" id="star5"><label for="star5" class="star">&#9733;</label>
+                <input type="radio" name="rating" id="star4"><label for="star4" class="star">&#9733;</label>
+                <input type="radio" name="rating" id="star3"><label for="star3" class="star">&#9733;</label>
+                <input type="radio" name="rating" id="star2"><label for="star2" class="star">&#9733;</label>
+                <input type="radio" name="rating" id="star1"><label for="star1" class="star">&#9733;</label>
+            </div>
+            <textarea id="review-message" placeholder="Write your review here..." rows="4"></textarea>
+            <button class="submit-review" onclick="submitReview()">Submit Review</button>
+        </div>
     </div>
+ </div>
 
-</body>
-</html>
+   <!--Footer Starts-->
 
+<footer class="footer bg-darktan">
+    <div class="container">
+    <p>&copy; 2025 EternaTimes. All rights reserved.</p>
+    <ul class="footer-links">
+    <li><a href="research.css">Privacy Policy</a></li>
+    <li><a href="blog.html">Terms of Service</a></li>
+    <li><a href="aboutus.html">Contact Us</a></li>
+    </ul>
+    <p>Follow us on:
+    <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a> |
+    <a href="https://x.com/?lang=en&mx=2" aria-label="Twitter">Twitter</a> |
+    <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+    </p>
+    </div>
+    </footer>
+    <!--Footer Ends-->
 
-
-
+<body/>

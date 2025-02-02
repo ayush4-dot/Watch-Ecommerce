@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -7,77 +8,178 @@
     <meta name="description" content="Websiteaboutwatches">
     <meta name="keywords" content="HTML,CSS,Javascript">
     <meta name="refresh"  content="30">
-    <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="watch.html">
-    <title>Research Page</title>
- </head>
- <body>
-    <header>
-        <div class="container">
-            <!--navigation bar-->
-            <nav class="navbar">
-                <ul class="navlist">
-                    <!--home page-->
-                    <li><a href="watch.html" class="navlinks">Home</a></li>
-                    <!--product page-->
-                    <li><a href="products.html" class="navlinks">Products</a></li>
-                    <!--research page-->
-                    <li><a href="research.html" class="navlinks active">Research</a></li>
-                    <!--blog page-->
-                    <li><a href="blog.html" class="navlinks">Blog</a></li>
-                    <!--About us page-->
-                    <li><a href="aboutus.html" class="navlinks">About Us</a></li>
-                </ul>
+    <title>Blog Page</title>
+    <!--CSS-->
+    <style>
+      .watch2 {
+    width: 100%;
+    min-height: 400px;
+    padding:10px;
+    background-image:url(image/Research\ background.webp);
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    }
+    .watch2 h2{
+      color:darkred;
+     text-align:center;
+     font-size: 70px;
+    }
+    .watch2 h4{
+      font-size: 35px;
+    text-align: center;
+    color: darkred;
+    margin-top: 70px;
+    }
+    .imageblog{
+      margin-left: 100px;
+    }
+    .blogcss p{
+      text-align:left;
+      font-size:18px;
+    }
+    .imageslider {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+    }
+    main{
+      width: 70%;
+      height: 500px;
+      margin: auto;
+      margin-top: 100px;
+      box-shadow: 0px 0px 3px gray;
+      position: relative;
+     overflow: hidden;
+    }
+    .slide{
+      width: 100%;
+      height: 100%;
+      transition: 1s;
+      position: absolute;
+    }
+    .click{
+      text-align: center;
+      margin-top: 15px;
+      }
+      .click button{
+        font-size: 20px;
+        padding: 5px;
+      }
+    </style>
+    
+  </head>
+  <body>
+     <header>
+         <div class="container">
+             <!--navigation bar-->
+             <nav class="navbar">
+                 <ul class="navlist">
+                     <!--home page-->
+                     <li><a href="watch.html" class="navlinks">Home</a></li>
+                     <!--product page-->
+                     <li><a href="products.html" class="navlinks">Products</a></li>
+                     <!--research page-->
+                     <li><a href="research.html" class="navlinks active">Research</a></li>
+                     <!--blog page-->
+                     <li><a href="blog.html" class="navlinks">Blog</a></li>
+                     <!--About us page-->
+                     <li><a href="aboutus.html" class="navlinks">About Us</a></li>
+                     <li><a href="contact.html" class="navlinks">Contact Us</a></li>
+                 </ul>
+ 
+                 <!-- Hamburger Menu for Mobile Devices -->
+                 <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                 </button>
+ 
+                 <!-- Search Bar Form -->
+                 <form class="search-bar" action="#" method="GET">
+                     <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
+                     <button class="search-button" type="submit">Search</button>
+                 </form>
+             </nav>
+         </div>
+     </header>
 
-                <!-- Hamburger Menu for Mobile Devices -->
-                <button class="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-
-                <!-- Search Bar Form -->
-                <form class="search-bar" action="#" method="GET">
-                    <input type="text" class="search-input" placeholder="Search for timeless watches..." name="query" aria-label="Search" />
-                    <button class="search-button" type="submit">Search</button>
-                </form>
-            </nav>
-        </div>
-    </header>
-    <!--RESEARCH STARTS-->
-<section>
+  <!-- Blog Section -->
+  <section>
     <!--main header -->
-    <div class="btcontainer">
-        <h2 class="home-text">About-Us</h2>
-        <h4> Everything You Need To Know</h4>
+    <div class="watch2">
+        <h2>Latest Blog</h2>
+        <h4>ALL ABOUT IT</h4>
     </div>
-</section>
-   <section>
-    <!--describing the research section-->
-       <div class="contentBx">
-           <h2 class="title text"> Here! Is the About-Us page</h2>
-           <p class="title-text">
-              We present you comparison between our page and reference page.
-           </p>
-       </div>
-   </section>
-</section>
+    
+
+      <!-- Blog Post about Watch Brand -->
+                <div class="blog-content">
+            <div class="imageblog">
+            <img src="image2/technology.webp" style="width:90%" height="375px">
+          </div>
+            <br>
+            <div class="blogcss">
+            <h2 style="color: darkblue;">Technology Overview</h2>
+            <p>Technology refers to the utilization of theoretical knowledge to accomplish practical objectives, particularly in a manner that can be replicated.The term can also denote the outcomes of these endeavors, encompassing both physical items like tools and machinery, as well as intangible assets such as software.</p> <p> Technology is essential in the fields of science, engineering, and daily living. Technological progress has brought about profound transformations within society. The earliest recorded technology, the stone tool, emerged during prehistoric times, succeeded by the mastery of fire, which is believed to have facilitated the expansion of the human brain and the evolution of language during the Ice Age, as suggested by the cooking hypothesis.</p><p> The advent of the wheel in the Bronze Age enabled enhanced mobility and the development of intricate machinery.</p><p> In more contemporary times, innovations such as the printing press, telephone, and the Internet have diminished communication barriers and initiated the knowledge economy.Technology plays a significant role in fostering economic growth and enhancing human well-being; however, it also presents challenges such as environmental pollution and the depletion of natural resources.</p> <p>Additionally, it can lead to social issues, including technological unemployment due to automation. Consequently, there are ongoing philosophical and political discussions regarding the implications of technology, its ethical considerations, and strategies to address its adverse effects.</p>
+            
+            <h2 style="color: darkblue;">Positive Impacts</h2>
+                  <p> Connecting with people around the world is now simpler than ever thanks to technology.</p><p> We can now communicate in real time with friends, family, and coworkers no matter where they are thanks to the growth of social media and messaging apps.You can now search for and find information on almost any topic thanks to the internet.</p><p> Furthermore, regardless of where they live, people can now access education and training thanks to technology.</p><p>Physicians and researchers have made tremendous progress in both disease prevention and treatment thanks to technology. Medical personnel can now interact with other healthcare providers and access patient records thanks to technology.</p>
+               
+
+           
+            <h2 style="color: darkblue;">Negative Impacts</h2>
+          <p>As robots and machines develop, they can now carry out tasks that were previously completed by humans.</p><p>For those who are displaced, this may result in economic instability and job loss.Bullying and harassment of others online is now easier than ever thanks to social media and messaging apps.</p><p> This can significantly affect mental health and wellbeing, especially for kids and teens who are more susceptible to cyberbullying.Many people spend excessive amounts of time on their phones, computers, and other devices, leading to a range of negative health effects, such as eye strain, sleep deprivation, and increased stress levels.It is obvious that technology will continue to have a big impact on society in the future.</p><p> New technological developments that will alter our way of life and work are anticipated in the upcoming years.But there are also worries about how technology will affect society in the future.</p><p>Concern over the possible harm that automation and artificial intelligence (AI) could do to employment and the economy, for instance, is growing. Concerns have also been raised regarding social media's effects on wellbeing and mental health, especially in young people.</p>
+          
+       <!-- Image Slider -->
+
+        <div class="imageslider">
+          <main id="slider">
+            <img src="image2/radoforblog.webp" class="slide" alt="">
+            <img src="image2/titanforblog.jpg" class="slide" alt="">
+            <img src="image2/gshockforblog.jpg" class="slide" alt="">
+            <img src="image2/Twomenforblog.jpg" class="slide" alt="">
+          </main>
+  </div>
+  <div class="click">
+      <button onclick="goPrev()">Prev</button>
+      <button onclick="goNext()">Next</button>
+  </div>
+  
+      
+       
+          
+          <h2 style="color: darkblue;">How Technology Help Sell Watches</h2>
+          <p>Through improvements in manufacturing, marketing, and customer experience, technology has completely changed the way watches are sold.</p><p> Online marketplaces and e-commerce platforms give brands access to a worldwide audience, and chatbots driven by AI offer round-the-clock customer service. </p><p>Using eye-catching images and focused ads to promote watches has become simpler thanks to social media and influencer marketing.</p><p> Customers can virtually try on watches before making a purchase thanks to augmented reality (AR), which increases confidence and engagement.</p><p> The market has grown thanks to smartwatches and hybrid models that combine contemporary technology with traditional craftsmanship.</p><p> Blockchain guarantees authenticity by stopping the sale of fake goods, while AI-driven personalization makes watch recommendations based on user preferences. Furthermore, 3D printing has simplified production and prototyping, lowering expenses and expanding design options. Big data analytics also aids brands in comprehending and forecasting consumer behavior.</p>
+
+          <h2 style="color: darkblue;">Conclusion</h2>
+          <p>
+            The watch industry has undergone a remarkable transformation due to advancements in technology, facilitating brands in their marketing, sales, and customer engagement efforts through novel approaches.</p><p> E-commerce platforms and online marketplaces have removed geographical limitations, enabling customers around the globe to explore and acquire watches from the convenience of their residences. Additionally, social media and influencer marketing have emerged as influential strategies, allowing brands to present their products to specific audiences via visually captivating content and credible endorsements.</p><p> Furthermore, Augmented Reality (AR) enriches the online shopping experience by permitting customers to virtually try on watches, thereby alleviating uncertainty and bolstering confidence in their purchasing choices.
+          </p>
+          </div>
+        </section>
+
+</body>
+<!--Footer Starts-->
 
 <footer class="footer bg-darktan">
   <div class="container">
-      <p>&copy; 2025 EternaTimes. All rights reserved.</p>
-      <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Contact Us</a></li>
-      </ul>
-      <p>Follow us on:
-          <a href="#" aria-label="Facebook">Facebook</a> |
-          <a href="#" aria-label="Twitter">Twitter</a> |
-          <a href="#" aria-label="Instagram">Instagram</a>
-      </p>
+  <p>&copy; 2025 EternaTimes. All rights reserved.</p>
+  <ul class="footer-links">
+  <li><a href="research.css">Privacy Policy</a></li>
+  <li><a href="blog.html">Terms of Service</a></li>
+  <li><a href="aboutus.html">Contact Us</a></li>
+  </ul>
+  <p>Follow us on:
+  <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a> |
+  <a href="https://x.com/?lang=en&mx=2" aria-label="Twitter">Twitter</a> |
+  <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+  </p>
   </div>
-</footer>
-<!--Footer ends-->
+  </footer>
+  <!--Footer Ends-->
+<script src="blog2.js"></script>
 </body>
 </html>

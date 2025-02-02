@@ -34,7 +34,7 @@ body {
 
 /* Main Container */
 .main-container {
-    min-height: 70vh;
+    min-height: 700px;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling issues */
     position: relative;
@@ -77,14 +77,14 @@ header {
 .navlist {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
 }
 li {
     list-style: none;
 }
 a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--primary-silverchalice);
     transition: color 0.3s ease;
 }
@@ -100,9 +100,9 @@ a {
     cursor: pointer;
 }
 .line {
-    width: 2rem;
-    height: 0.2rem;
-    margin: 0.3rem 0;
+    width: 32px;
+    height: 3px;
+    margin: 5px 0;
     background: var(--primary-black);
 }
 h4{
@@ -113,14 +113,14 @@ h4{
 .search-bar {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 8px;
     background: var(--primary-silver);
     border-radius: 5px;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    margin-top: 1.5rem;
+    margin-top: 24px;
 }
 
 /* Search Input Field */
@@ -128,19 +128,18 @@ h4{
     flex: 1;
     border: none;
     outline: none;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 8px;
+    font-size: 16px;
     color: var(--primary-black);
     background: transparent;
 }
-
 /* Search Button */
 .search-button {
     border: none;
     background: var(--secondary-shadow);
     color: white;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 16px;
+    padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -163,7 +162,7 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 64px 0;
     height: calc(100vh - 14vh); /* Ensures the hero section takes the remaining height after header */
     text-align: center; /* Center align text inside hero section */
 }
@@ -178,13 +177,12 @@ h4{
 }
 
 h1 {
-    font-size: 4.1rem;
+    font-size: 66px;
     text-transform: uppercase;
     color: var(--primary-black);
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
 }
-
 /* Hero Section Image */
 .hero-section img {
     width: 100%; /* Make the image responsive */
@@ -197,14 +195,14 @@ h1 {
 .search-bar {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 8px;
     background: var(--primary-silver);
     border-radius: 5px;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    margin-top: 1.5rem;
+    margin-top: 24px;
 }
 
 /* Search Input Field */
@@ -212,8 +210,8 @@ h1 {
     flex: 1;
     border: none;
     outline: none;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 8px;
+    font-size: 16px;
     color: var(--primary-black);
     background: transparent;
 }
@@ -223,8 +221,8 @@ h1 {
     border: none;
     background: var(--secondary-shadow);
     color: white;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 16px;
+    padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -238,23 +236,23 @@ h1 {
 /* Footer */
 footer {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 32px 16px;
     background: var(--secondary-black);
     color: var(--primary-silver);
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 2rem;
+    font-size: 14px;
+    margin-top: 32px;
 }
 
 /* Border styling for the paragraph with data-type="border" */
 [data-type="border"] {
     display: block; /* Block-level element for proper layout */
-    border-right: 0.6rem solid var(--primary-pastelbrown); /* Apply the right border */
-    padding-right: 2rem; /* Space between text and border */
-    margin-bottom: 1rem; /* Add spacing for multiple elements */
+    border-right: 10px solid var(--primary-pastelbrown); /* Apply the right border */
+    padding-right: 32px; /* Space between text and border */
+    margin-bottom: 16px; /* Add spacing for multiple elements */
     text-align: right; /* Right-align text */
     
-    min-height: 1.5rem; /* Ensure element has visible height */
+    min-height: 24px; /* Ensure element has visible height */
 }
 
 /* Styling for h2 and break */
@@ -262,10 +260,10 @@ footer {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
-    gap: 1rem;
+    gap: 16px;
     width: 100%;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 32px 0;
 }
 
 /* Scroll animation */
@@ -285,24 +283,23 @@ footer {
 
 h2 {
     color: #101010;
-    font-size: 3rem;
-  font-style: times new roman;
+    font-size: 48px;
+    font-family: "Times New Roman", serif;
     display: inline-block;
-    margin-right: 2rem;
-    white-space: nowrap;
-}
+    margin-right: 32px;
+    white-space: nowrap;}
 
 
 /* Add Watch Emoji Styling */
 .watch-emoji {
-    font-size: 3rem; /* Adjust size of emoji */
-    margin-right: 2rem;
+    font-size: 48px; /* Adjust size of emoji */
+    margin-right: 32px;
     display: inline-block;
     white-space: nowrap;
 }
 
 .break {
-    width: 2rem;
+    width: 32px;
     aspect-ratio: 2;
     border-radius: 50%;
     display: inline-block;
@@ -370,19 +367,19 @@ h2 {
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
-    margin: 2rem 0;
+    font-size: 32px;
+    margin: 32px 0;
     color: #333; /* Using your existing color variable */
 }
  /* Create a container for the title */
-.title-container {
+ .title-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 32px 0;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 32px;
     color: #333;
 }
 /* Table Styles */
@@ -452,8 +449,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin:0;
-    }
-
+}
 
 
 
